@@ -1,4 +1,5 @@
 import java.util.HashMap;
+import java.util.Map;
 
 public class Maps {
     public static void main(String[] args) {
@@ -27,8 +28,8 @@ public class Maps {
             System.out.println(rugratName);
         }
 
-
         System.out.println("\n");
+
         for (int rugratAge : rugratsAdultAges.values()) { // iterate through values
             System.out.println(rugratAge);
         }
@@ -39,11 +40,24 @@ public class Maps {
         rugratsAdultAges.replace("Phil", 600); // changes value of said key
         System.out.println(rugratsAdultAges);
 
-//        for (int i = 0; i < rugratsAdultAges.keySet().size(); i++) {
-//            for (int j = 0; j < rugratsAdultAges.values().size(); j++) {
-//                System.out.println(i + ") " + rugratsAdultAges.keySet());
-//            }
-//        }
+        System.out.println("\n");
 
+        for (Map.Entry rugrats : rugratsAdultAges.entrySet()) { // prints all object data without any bracket type
+            System.out.println(rugrats);
+        }
+
+        System.out.println("\n");
+
+        int counter = 1;
+        for (Map.Entry rugrats : rugratsAdultAges.entrySet()) {
+            System.out.println(counter++ + ") " + rugrats.getValue());
+        }
+
+        System.out.println("\n");
+
+        int count = 1;
+        for (Map.Entry rugrats : rugratsAdultAges.entrySet()) {
+            System.out.println(count++ + ". " + rugrats.getKey());
+        }
     }
 }
