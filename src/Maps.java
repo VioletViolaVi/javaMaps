@@ -27,11 +27,17 @@ public class Maps {
             System.out.println(rugratName);
         }
 
-        System.out.println("\n");
 
+        System.out.println("\n");
         for (int rugratAge : rugratsAdultAges.values()) { // iterate through values
             System.out.println(rugratAge);
         }
+
+        System.out.println("\n");
+
+        rugratsAdultAges.put("Tommy", 27); // use .put() to change value of existing key
+        rugratsAdultAges.replace("Phil", 600); // changes value of said key
+        System.out.println(rugratsAdultAges);
 
 //        for (int i = 0; i < rugratsAdultAges.keySet().size(); i++) {
 //            for (int j = 0; j < rugratsAdultAges.values().size(); j++) {
